@@ -1,7 +1,7 @@
 # Docker-SpringBoot-REST-API
 this simple SpringBoot project having RESTAPI implimentation, Thymeleaf frontPage. It also having Docker configuration (dockerfile and docker-compose)
 
-DB used:- Postgress.
+DB used:- Postgress.<br>
 IDE- IntelliJ IDEA <br>
 For creating the Docker image, you will need to create .jar file of the project 
 
