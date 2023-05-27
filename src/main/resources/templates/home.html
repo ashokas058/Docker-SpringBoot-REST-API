@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Spring Boot REST API Animation</title>
+    <style>
+    /* CSS styles */
+    body {
+      background-color: #f2f2f2;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+  </style>
+</head>
+<body>
+<div class="container">
+    <h1>Spring Boot REST API </h1>
+    <h4>
+        Usage:- Bpay User <br>
+        Database:- PostgreSQL
+    </h4>
+    <p> /create :- send POST request with data<br>
+        {
+        "id=" + id +
+        ", username='" + username + '\'' +
+        ", email='" + email + '\'' +
+        ", password='" + password + '\'' +
+        ", fullname='" + fullname + '\'' +
+        ", accountNumber=" + accountNumber +
+        '}';
+    </p>
+    <p><br> /getUsers :- get all users in list</p>
+
+</div>
+</body>
+</html>

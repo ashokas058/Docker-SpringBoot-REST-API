@@ -1,0 +1,33 @@
+version: "3.0"
+services:
+  bbpay-restapi:
+    container_name: bpay-restapi
+    restart: always
+    depends_on:
+      - bpaydb
+    image: bpay:1.0
+    environment:
+      - DB_HOST=bpaydb
+      - DB_USERNAME=postgres
+      - DB_PASSWORD=spring
+      - DB_PORT=5432
+      - DB_NAME=bpay
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - 8080:8080
+  bpaydb:
+    container_name: bpaydb
+    image: postgres:10
+    restart: always
+    expose:
+      - 5432
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=spring
+      - POSTGRES_DB=bpay
+    volumes:
+      - bpay_db_vol:/var/lib/postgresql/data
+volumes:
+    bpay_db_vol:
